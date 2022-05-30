@@ -461,6 +461,7 @@ span {
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -468,3 +469,23 @@ span {
 
 
 
+=======
+/*AANIMACIONES*/
+
+.symbol img:hover {
+    transform: scale(1.1);
+}
+
+.menu nav ul li a:hover {
+    transform: scale(1.1);
+    transition: all 0.1s;
+    background-color: rgb(255, 250, 238);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid rgb(65, 13, 13);
+}
+
+.redes img:hover {
+    transform: scale(1.1);
+    transition: all 0.1s;
+}
+>>>>>>> rama_animaciones
