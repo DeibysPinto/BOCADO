@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: DM-Sans;
-    text-decoration: none;
     box-sizing: border-box;
 }
 
@@ -13,7 +12,13 @@
 
 body {
     background-color: rgb(255, 246, 235);
-display: block;
+}
+
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
 }
 
 /* GRIDS */
@@ -50,7 +55,6 @@ footer {
 
 .headerSuperior {
     width: 50%;
-    margin: 5px;
     display: flex;
     justify-content: center;
 }
@@ -66,6 +70,11 @@ footer {
     height: 35px;
     width: 35px;
     margin: 50px 20px 0px 20px;
+}
+
+
+.symbol img:hover {
+    transform: scale(1.1);
 }
 
 /*BARRA DE NAVEGACION*/
@@ -96,7 +105,6 @@ footer {
 
 .menu nav ul li {
     height: 100%;
-    list-style: none;
 }
 
 .menu nav ul li a {
@@ -108,6 +116,15 @@ footer {
     margin: 0px 10px 0px 0px;
     font-size: 16px;
 }
+
+.menu nav ul li a:hover {
+    transform: scale(1.1);
+    transition: all 0.1s;
+    background-color: rgb(255, 250, 238);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid rgb(65, 13, 13);
+}
+
 
 
 /*MAIN*/
@@ -146,7 +163,6 @@ footer {
 }
 
 .textfooter h2 {
-    margin: auto;
     padding: 20px;
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -155,14 +171,13 @@ footer {
 .textfooter nav ul {
     width: 100%;
     height: auto;
-    margin: 18px;
     list-style: none;
 }
 
 .textfooter nav ul li {
-    width: auto;
+    width: 100%;
     height: auto;
-    margin: 3px;
+    margin: 3px 0px 3px 0px;
 }
 
 .textfooter nav ul li a {
@@ -185,17 +200,21 @@ footer {
 }
 
 .redes {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
 
 .redes img {
     width: 70px;
     height: 70px;
     margin: 10px;
+}
+
+.redes img:hover {
+    transform: scale(1.1);
 }
 
 span {
@@ -363,7 +382,9 @@ span {
 
 /*@MEDIA*/
 
-@media screen and (max-width:900px) {
+@media (min-width:320px) and (max-width:900px) {
+
+    /*COMIDAS*/
 
     .desayuno,
     .almuerzo,
@@ -388,7 +409,7 @@ span {
     }
 }
 
-@media screen and (max-width:820px) {
+@media (min-width:320px) and (max-width:820px) {
 
     /*MAPA*/
 
@@ -424,7 +445,7 @@ span {
 }
 
 
-@media screen and (max-width:750px) {
+@media (min-width:320px) and (max-width:750px) {
 
 
     /*HEADER*/
@@ -457,25 +478,173 @@ span {
         padding-bottom: 60%;
     }
 
+}
+
+
+@media (min-width:320px) and (max-width:550px) {
+
+    /*BARRA DE NAVEGACION*/
+
+    .navegacion {
+        width: auto;
+        height: auto;
+    }
+
+    .menu nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*MAIN*/
+
+    .imagenes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagenes img {
+        width: 100%;
+    }
+
+    /*FOOTER*/
+
+    .textfooter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .redes img {
+        width: 50px;
+        height: 50px;
+    }
+
     /*COMIDAS*/
 
+    .comidas img {
+        margin: 20px 0px 20px 0px;
+    }
+
+    .comidas section {
+        margin: 0px;
+    }
+
+    .comidas h2 {
+        margin: 20px 0px 10px 0px;
+    }
+
+    .comidas p {
+        margin: 0px;
+    }
+
+    /*QUIENES SOMOS*/
+
+    .nosotros {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .nosotros h2 {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .nosotros p {
+        margin: 20px 0px 0px 0px;
+        padding: 0px 30px 0px 30px;
+        margin-bottom: 20px;
+    }
+
 }
 
-/*AANIMACIONES*/
+@media (min-width:320px) and (max-width:535px) {
 
-.symbol img:hover {
-    transform: scale(1.1);
+    /*CONTACTO*/
+
+    .formulario {
+        width: 100%;
+        height: auto;
+        margin: 20px 0px 20px 0px;
+        background-color: none;
+        padding: 10px;
+        box-shadow: none;
+
+    }
+
+    .formbox h2 {
+        margin: 10px 0px 0px 0px;
+        margin-bottom: 30px;
+    }
+
+    .formbox input {
+        width: 400px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .formtext2 input {
+        width: 400px;
+    }
+
+    .escribenos textarea {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .botons input {
+        width: 400px;
+    }
+
 }
 
-.menu nav ul li a:hover {
-    transform: scale(1.1);
-    transition: all 0.1s;
-    background-color: rgb(255, 250, 238);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    border-bottom: 4px solid rgb(65, 13, 13);
+@media (min-width:320px) and (max-width:480px) {
+
+    /*COMIDAS*/
+
+    .comidas img {
+        width: 320px;
+        height: 200px;
+    }
+
+    /*QUIENES SOMOS*/
+
+    .nosotros img {
+        width: 320px;
+        height: 350px;
+    }
 }
 
-.redes img:hover {
-    transform: scale(1.1);
-    transition: all 0.1s;
+@media (min-width:320px) and (max-width:450px) {
+
+    /*CONTACTO*/
+
+    .formulario {
+        width: 100%;
+        height: auto;
+        margin: 20px 0px 20px 0px;
+        background-color: none;
+        padding: 10px;
+        box-shadow: none;
+
+    }
+
+    .formbox h2 {
+        margin: 10px 0px 0px 0px;
+        margin-bottom: 30px;
+    }
+
+    .formbox input {
+        width: 300px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .formtext2 input {
+        width: 300px;
+    }
+
+    .escribenos textarea {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .botons input {
+        width: 300px;
+    }
+
 }
