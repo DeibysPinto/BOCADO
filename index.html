@@ -6,92 +6,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bocado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
 
 <body>
-    <div class="contenido">
 
-        <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="logo container-fluid">
 
-            <div class="headerSuperior">
-                <div class="logo">
-                    <a href="#"><img src="./image/bocadologo.png" alt="Logo"></a>
-                </div>
+            <a class="navbar-brand d-block" href="#"><img src="./image/bocadologo.png" alt=""></a>
 
-                <div class="symbol">
-                    <a href="./pages/ubicacion.html"><img src="./image/map.png" alt="map"></a>
-                </div>
-            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div class="navegacion">
 
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li class="menu__inicio"><a href="#">Inicio</a></li>
-                            <li class="menu__desayunos"><a href="./pages/desayunos.html">Desayunos</a></li>
-                            <li classs="menu__almeurzos"><a href="./pages/almuerzos.html">Almuerzos</a></li>
-                            <li class="menu__bebidas"><a href="./pages/bebidas.html">Bebidas</a></li>
-                            <li class="menu__postres"><a href="./pages/postres.html">Postres</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <div class="container-fluid collapse navbar-collapse" id="navbarNav">
 
-        </header>
+                <ul class=" navbar-nav">
 
-        <main>
-            <div class="imagenes">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/desayunos.html">Desayunos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/almuerzos.html">Almuerzos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/bebidas.html">Bebidas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/postres.html">Postres</a>
+                    </li>
 
-                <img class="arepas" src="./image/arepas.jpg" alt="arepas">
-                <img class="chontaduro" src="./image/chontaduro.jpg" alt="chontaduro">
-                <img class="empanadas" src="./image/empanadas.jpg" alt="empanadas">
-                <img class="patacon" src="./image/patacon.jpg" alt="patacon">
+                </ul>
 
             </div>
-        </main>
 
-        <footer>
+        </div>
 
-            <div class="textfooter">
+    </nav>
 
-                <div>
-                    <nav>
-                        <h2>BOCADO</h2>
-                        <ul>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="./pages/ubicacion.html">Ubicacion</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    </header>
 
-                <div>
-                    <nav>
-                        <h2>Mas Informacion</h2>
-                        <ul>
-                            <li><a href="./pages/contacto.html">Contacto</a></li>
-                            <li><a href="./pages/quienesomos.html">Quienes somos</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <main>
+        <div class="imagenes">
+
+            <img class="arepas" src="./image/arepas.jpg" alt="arepas">
+            <img class="chontaduro" src="./image/chontaduro.jpg" alt="chontaduro">
+            <img class="empanadas" src="./image/empanadas.jpg" alt="empanadas">
+            <img class="patacon" src="./image/patacon.jpg" alt="patacon">
+
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="textfooter">
+
+            <div>
+                <nav>
+                    <h2>BOCADO</h2>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="./pages/ubicacion.html">Ubicacion</a></li>
+                    </ul>
+                </nav>
             </div>
 
-            <div class="social">
-                <div class="redes">
-
-                    <a href="https://facebook.com"><img src="./image/facebook.png" alt="Facebook"></a>
-                    <a href="https://instagram.com"><img src="./image/instagram.png" alt="Instagram"></a>
-                    <a href="https://twitter.com"><img src="./image/twitter.png" alt="Twitter"></a>
-                    <a href="https://linkedin.com"><img src="./image/linkedin.png" alt="Linkedin"></a>
-
-                </div>
-                <span>Derechos reservados - Deibys Pinto</span>
+            <div>
+                <nav>
+                    <h2>Mas Informacion</h2>
+                    <ul>
+                        <li><a href="./pages/contacto.html">Contacto</a></li>
+                        <li><a href="./pages/quienesomos.html">Quienes somos</a></li>
+                    </ul>
+                </nav>
             </div>
-        
-        </footer>
+        </div>
+
+        <div class="social">
+            <div class="redes">
+
+                <a href="https://facebook.com"><img src="./image/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com"><img src="./image/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com"><img src="./image/twitter.png" alt="Twitter"></a>
+                <a href="https://linkedin.com"><img src="./image/linkedin.png" alt="Linkedin"></a>
+
+            </div>
+            <span>Derechos reservados - Deibys Pinto</span>
+        </div>
+
+    </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
