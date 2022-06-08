@@ -85,52 +85,6 @@ footer {
 .navbar {
     border-bottom: 3px solid rgb(65, 13, 13) ;
 }
-/*
-.navegacion {
-    width: 100%;
-    height: 70px;
-    background-color: rgb(253, 245, 232);
-    border-top: solid 3px rgb(165, 146, 144);
-    border-bottom: solid 3px rgb(175, 165, 164);
-}
-
-.menu {
-    width: 80%;
-    margin: auto;
-    height: 100%;
-
-}
-
-.menu nav {
-    height: 100%;
-}
-
-.menu nav ul {
-    height: 100%;
-    display: flex;
-}
-
-.menu nav ul li {
-    height: 100%;
-}
-
-.menu nav ul li a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding: 15px;
-    color: rgb(58, 45, 33);
-    margin: 0px 10px 0px 0px;
-    font-size: 16px;
-}
-
-.menu nav ul li a:hover {
-    transform: scale(1.1);
-    transition: all 0.1s;
-    background-color: rgb(255, 250, 238);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    border-bottom: 4px solid rgb(65, 13, 13);
-}
 
 /*MAIN*/
 
@@ -462,21 +416,6 @@ span {
 
 @media (min-width:320px) and (max-width:750px) {
 
-
-    /*HEADER*/
-
-    .headerSuperior {
-        width: auto;
-    }
-
-    .navegacion {
-        width: auto;
-    }
-
-    .menu {
-        width: 100%;
-    }
-
     /*MAIN*/
 
     .imagenes {
@@ -497,19 +436,6 @@ span {
 
 
 @media (min-width:320px) and (max-width:550px) {
-
-    /*BARRA DE NAVEGACION*/
-
-    .navegacion {
-        width: auto;
-        height: auto;
-    }
-
-    .menu nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
     /*MAIN*/
 
