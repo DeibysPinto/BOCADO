@@ -1,0 +1,585 @@
+@import "colores";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: DM-Sans;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: DM-Sans;
+    src: url(../Fuentes/DM-Sans/DMSans-Bold.ttf);
+}
+
+body {
+    background-color: $color-fondo;
+}
+
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* GRIDS */
+
+.contenido {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: $color-fondo;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*HEADER SUPERIOR*/
+
+.headerSuperior {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 90px;
+    width: 240px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    &:active {
+        transform: scale(1.01);
+    }
+}
+
+/*BARRA DE NAVEGACION*/
+
+.navbar {
+    border-bottom: 3px solid $border-header;
+}
+
+/*MAIN*/
+
+.imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color:$background-footer;
+    border-top: 2px solid $border-footer;
+}
+
+
+.textfooter {
+    display: flex;
+    justify-content: space-around;
+
+    nav {
+        width: auto;
+        height: auto;
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color:$h2-footer;
+        font-size: 20px;
+    }
+
+    ul {
+        width: 100%;
+        height: auto;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+
+            a {
+                color: $a-footer;
+                font-size: 18px;
+                font-style: oblique;
+
+                &:hover {
+                    color: $text-white;
+                }
+            }
+        }
+    }
+}
+
+
+.social {
+    width: 100%;
+    height: 200px;
+    background-image: url(../image/cafe.jpg);
+    background-size: cover;
+    border-top: 2px solid $border-footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+        display: block;
+        text-align: center;
+        color:$span-footer;
+        font-size: 16px;
+    }
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    img {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+/*COMIDAS*/
+
+.desayuno,
+.almuerzo,
+.jugos,
+.postre {
+    width: 90%;
+    background-color: rgb(255, 246, 235);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-right: solid 4px $border-header;
+}
+
+.comidas {
+    display: flex;
+    justify-content: center;
+
+    img {
+        margin: 20px;
+        width: 460px;
+        height: 300px;
+    }
+
+    section {
+        margin: 20px;
+        display: flex;
+    }
+
+    h2 {
+        margin: 30px 0px 10px 0px;
+        text-align: center;
+        font-size: 20px;
+        color:$h2-comidas;
+    }
+
+    p {
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+        color:$p-comidas;
+    }
+}
+
+
+/*MAPA*/
+
+.mapa {
+    overflow: hidden;
+    padding-bottom: 40%;
+    position: relative;
+    height: 0%;
+
+    iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+/*CONTACTO*/
+
+.bosque {
+    background-image: url(../image/Bosque.png);
+}
+
+.formulario {
+    width: 810px;
+    height: 500px;
+    background-color:$background-form;
+    padding: 30px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0px 30px 30px 10px black;
+}
+
+.formbox h2 {
+    color:$h2-form;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.formtext {
+    display: flex;
+}
+
+.formbox input {
+    background-color:$background-form;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 2px solid $border-form;
+    width: 400px;
+    color: aliceblue;
+}
+
+.formtext2 input {
+    width: 188px;
+}
+
+.escribenos textarea {
+    border-radius: 4px;
+    margin: 10px;
+    width: auto;
+    height: auto;
+    border: solid 4px $color-textarea;
+    background-color: $color-textarea;
+    font-size: 16px;
+}
+
+.botons {
+    width: 100%;
+    margin-top: 20px;
+    display: inline-block;
+
+    input {
+        display: inline-block;
+        width: 350px;
+        background-color:$border-form;
+
+        &:active {
+            transform: scale(1.03);
+        }
+    }
+}
+
+/*QUIENES SOMOS*/
+
+.arbol img {
+    width: 100%;
+}
+
+.nosotros {
+    width: auto;
+    margin: 20px;
+    text-align: center;
+
+    h2 {
+        margin: 20px;
+        color:$h2-nosotros;
+    }
+
+    p {
+        margin: 20px;
+        padding: 0px 30px 0px 30px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 450px;
+        height: 500px;
+    }
+}
+
+/*@MEDIA*/
+
+@media (min-width:320px) and (max-width:900px) {
+
+    /*COMIDAS*/
+
+    .desayuno,
+    .almuerzo,
+    .jugos,
+    .postre {
+        width: 95%;
+        border-right: none;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        align-items: center;
+        border-bottom: solid 3px $border-header;
+        ;
+    }
+
+    .comidas p {
+        padding: 20px 40px 20px 40px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width:320px) and (max-width:820px) {
+
+    /*MAPA*/
+
+    .mapa {
+        padding-bottom: 50%;
+    }
+
+    /*CONTACTO*/
+
+    .formulario {
+        width: 90%;
+        height: auto;
+    }
+
+    .formtext {
+        display: block;
+
+        div {
+            text-align: center;
+        }
+    }
+
+    .escribenos textarea {
+        margin: 20px;
+    }
+
+    .botons {
+        width: 100%;
+        margin-top: 20px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+
+@media (min-width:320px) and (max-width:750px) {
+
+    /*MAIN*/
+
+    .imagenes {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 2px;
+    }
+
+    /*MAPA*/
+
+    .mapa {
+        overflow: hidden;
+        padding-bottom: 60%;
+    }
+
+}
+
+
+@media (min-width:320px) and (max-width:550px) {
+
+    /*MAIN*/
+
+    .imagenes {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    /*FOOTER*/
+
+    .textfooter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .redes img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*COMIDAS*/
+
+    .comidas {
+
+        img {
+            margin: 20px 0px 20px 0px;
+        }
+
+        section {
+            margin: 0px;
+        }
+
+        h2 {
+            margin: 20px 0px 10px 0px;
+        }
+
+        p {
+            margin: 0px;
+        }
+    }
+
+    /*QUIENES SOMOS*/
+
+    .nosotros {
+        margin: 20px 0px 0px 0px;
+
+        h2 {
+            margin: 20px 0px 0px 0px;
+        }
+
+        p {
+            margin: 20px 0px 0px 0px;
+            padding: 0px 30px 0px 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+@media (min-width:320px) and (max-width:535px) {
+
+    /*CONTACTO*/
+
+    .formulario {
+        width: 100%;
+        height: auto;
+        margin: 20px 0px 20px 0px;
+        background-color: none;
+        padding: 10px;
+        box-shadow: none;
+
+    }
+
+    .formbox {
+        h2 {
+            margin: 10px 0px 0px 0px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 400px;
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+    .formtext2 input {
+        width: 400px;
+    }
+
+    .escribenos textarea {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .botons input {
+        width: 400px;
+    }
+
+}
+
+@media (min-width:320px) and (max-width:480px) {
+
+    /*COMIDAS*/
+
+    .comidas img {
+        width: 320px;
+        height: 200px;
+    }
+
+    /*QUIENES SOMOS*/
+
+    .nosotros img {
+        width: 320px;
+        height: 350px;
+    }
+}
+
+@media (min-width:320px) and (max-width:450px) {
+
+    /*CONTACTO*/
+
+    .formulario {
+        width: 100%;
+        height: auto;
+        margin: 20px 0px 20px 0px;
+        background-color: none;
+        padding: 10px;
+        box-shadow: none;
+
+    }
+
+    .formbox {
+        h2 {
+            margin: 10px 0px 0px 0px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 300px;
+            margin: 10px 0px 0px 0px;
+        }
+    }
+
+    .formtext2 input {
+        width: 300px;
+    }
+
+    .escribenos textarea {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .botons input {
+        width: 300px;
+    }
+}
