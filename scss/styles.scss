@@ -131,7 +131,7 @@ footer {
                 font-style: oblique;
 
                 &:hover {
-                    color: $text-white;
+                    color: $hover-footer;
                 }
             }
         }
@@ -184,7 +184,7 @@ footer {
 .jugos,
 .postre {
     width: 90%;
-    background-color: rgb(255, 246, 235);
+    background-color:$color-fondo;
     display: flex;
     justify-content: center;
     flex-direction: column;

@@ -67,7 +67,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #3b1e1b;
-  border-top: 2px solid #afa5a4; }
+  border-top: 2px solid #cac4c4; }
 
 .textfooter {
   display: flex;
@@ -101,7 +101,7 @@ footer {
   height: 200px;
   background-image: url(../image/cafe.jpg);
   background-size: cover;
-  border-top: 2px solid #afa5a4;
+  border-top: 2px solid #cac4c4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +109,7 @@ footer {
   .social span {
     display: block;
     text-align: center;
-    color: aliceblue;
+    color: white;
     font-size: 16px; }
 
 .redes {
@@ -135,33 +135,29 @@ footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-right: solid 4px #3b1e1b; }
+  border-right: solid 4px #410d0d; }
 
 .comidas {
   display: flex;
   justify-content: center; }
-
-.comidas img {
-  margin: 20px;
-  width: 460px;
-  height: 300px; }
-
-.comidas section {
-  margin: 20px;
-  display: flex; }
-
-.comidas h2 {
-  margin: 30px 0px 10px 0px;
-  text-align: center;
-  font-size: 20px;
-  color: #800a0a; }
-
-.comidas p {
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
-  color: black; }
+  .comidas img {
+    margin: 20px;
+    width: 460px;
+    height: 300px; }
+  .comidas section {
+    margin: 20px;
+    display: flex; }
+  .comidas h2 {
+    margin: 30px 0px 10px 0px;
+    text-align: center;
+    font-size: 20px;
+    color: #800a0a; }
+  .comidas p {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: black; }
 
 /*MAPA*/
 .mapa {
@@ -169,13 +165,12 @@ footer {
   padding-bottom: 40%;
   position: relative;
   height: 0%; }
-
-.mapa iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute; }
+  .mapa iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
 
 /*CONTACTO*/
 .bosque {
@@ -226,14 +221,12 @@ footer {
   width: 100%;
   margin-top: 20px;
   display: inline-block; }
-
-.botons input {
-  display: inline-block;
-  width: 350px;
-  background-color: #484ea7; }
-
-.botons input:active {
-  transform: scale(1.03); }
+  .botons input {
+    display: inline-block;
+    width: 350px;
+    background-color: #484ea7; }
+    .botons input:active {
+      transform: scale(1.03); }
 
 /*QUIENES SOMOS*/
 .arbol img {
@@ -243,19 +236,16 @@ footer {
   width: auto;
   margin: 20px;
   text-align: center; }
-
-.nosotros h2 {
-  margin: 20px;
-  color: #200404; }
-
-.nosotros p {
-  margin: 20px;
-  padding: 0px 30px 0px 30px;
-  margin-bottom: 20px; }
-
-.nosotros img {
-  width: 450px;
-  height: 500px; }
+  .nosotros h2 {
+    margin: 20px;
+    color: #800a0a; }
+  .nosotros p {
+    margin: 20px;
+    padding: 0px 30px 0px 30px;
+    margin-bottom: 20px; }
+  .nosotros img {
+    width: 450px;
+    height: 500px; }
 
 /*@MEDIA*/
 @media (min-width: 320px) and (max-width: 900px) {
@@ -271,7 +261,7 @@ footer {
     flex-direction: column;
     margin: 10px;
     align-items: center;
-    border-bottom: solid 3px #3b1e1b; }
+    border-bottom: solid 3px #410d0d; }
   .comidas p {
     padding: 20px 40px 20px 40px;
     font-size: 18px; } }
@@ -286,8 +276,8 @@ footer {
     height: auto; }
   .formtext {
     display: block; }
-  .formtext div {
-    text-align: center; }
+    .formtext div {
+      text-align: center; }
   .escribenos textarea {
     margin: 20px; }
   .botons {
@@ -313,8 +303,8 @@ footer {
   .imagenes {
     display: flex;
     flex-direction: column; }
-  .imagenes img {
-    width: 100%; }
+    .imagenes img {
+      width: 100%; }
   /*FOOTER*/
   .textfooter {
     display: flex;
@@ -335,12 +325,12 @@ footer {
   /*QUIENES SOMOS*/
   .nosotros {
     margin: 20px 0px 0px 0px; }
-  .nosotros h2 {
-    margin: 20px 0px 0px 0px; }
-  .nosotros p {
-    margin: 20px 0px 0px 0px;
-    padding: 0px 30px 0px 30px;
-    margin-bottom: 20px; } }
+    .nosotros h2 {
+      margin: 20px 0px 0px 0px; }
+    .nosotros p {
+      margin: 20px 0px 0px 0px;
+      padding: 0px 30px 0px 30px;
+      margin-bottom: 20px; } }
 
 @media (min-width: 320px) and (max-width: 535px) {
   /*CONTACTO*/
