@@ -1,0 +1,38 @@
+//mapa de colores
+
+$colors: (
+    border-header:rgb(65, 13, 13),
+    color-fondo:rgb(255, 246, 235),
+    border-footer:rgb(202, 196, 196),
+    h2-footer:rgb(255, 255, 255),
+    a-footer: rgb(202, 196, 196),
+    span-footer: rgb(255, 255, 255),
+    hover-footer: rgb(255, 255, 255),
+    background-footer: #3b1e1b,
+    h2-comidas: rgb(128, 10, 10),
+    p-comidas: rgb(0, 0, 0),
+    background-form: rgb(22, 22, 26),
+    h2-form: white,
+    border-form: rgb(72, 78, 167),
+    color-textarea: rgb(229, 229, 250),
+    h2-nosotros: rgb(128, 10, 10),
+    btn-enviar:rgb(4, 36, 78),
+    btn-limpiar:rgb(70, 4, 4),
+    btn-limpiar-act:rgb(116, 6, 6),
+    btn-enviar-act:rgb(8, 54, 114),
+);
+
+//shadows
+
+$shadow-form: 0px 30px 30px 10px black;
+$shadow-comida: 0px 10px 15px 0px rgba(0, 0, 0, 0.8);
+
+//@media
+
+$tablet:992px;
+$tablet-mid:820px;
+$movil:750px;
+$movil-mid:550px;
+$movil-mini:480px;
+
+

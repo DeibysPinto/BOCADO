@@ -61,6 +61,17 @@ footer {
   .imagenes img {
     width: 100%;
     height: 100%; }
+  @media (min-width: 320px) and (max-width: 750px) {
+    .imagenes {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 2px; } }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .imagenes {
+      display: flex;
+      flex-direction: column; }
+      .imagenes img {
+        width: 100%; } }
 
 /* FOOTER */
 footer {
@@ -95,6 +106,10 @@ footer {
         font-style: oblique; }
         .textfooter ul li a:hover {
           color: white; }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .textfooter {
+      flex-direction: column;
+      text-align: center; } }
 
 .social {
   width: 100%;
@@ -124,6 +139,14 @@ footer {
     margin: 10px; }
     .redes img:hover {
       transform: scale(1.1); }
+    @media (min-width: 320px) and (max-width: 550px) {
+      .redes img {
+        width: 50px;
+        height: 50px; } }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .redes {
+      width: 50px;
+      height: 50px; } }
 
 /*COMIDAS*/
 .desayuno,
@@ -136,6 +159,13 @@ footer {
   justify-content: center;
   flex-direction: column;
   border-right: solid 4px #410d0d; }
+  @media (min-width: 320px) and (max-width: 992px) {
+    .desayuno,
+    .almuerzo,
+    .jugos,
+    .postre {
+      width: 95%;
+      border-right: none; } }
 
 .comidas {
   display: flex;
@@ -144,9 +174,23 @@ footer {
     margin: 20px;
     width: 460px;
     height: 300px; }
+    .comidas img:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.8); }
+    @media (min-width: 320px) and (max-width: 480px) {
+      .comidas img {
+        width: 320px;
+        height: 200px; } }
   .comidas section {
     margin: 20px;
     display: flex; }
+    @media (min-width: 320px) and (max-width: 992px) {
+      .comidas section {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        align-items: center;
+        border-bottom: solid 3px #410d0d; } }
   .comidas h2 {
     margin: 30px 0px 10px 0px;
     text-align: center;
@@ -158,6 +202,19 @@ footer {
     text-align: center;
     font-size: 16px;
     color: black; }
+    @media (min-width: 320px) and (max-width: 992px) {
+      .comidas p {
+        padding: 20px 40px 20px 40px;
+        font-size: 18px; } }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .comidas img {
+      margin: 20px 0px 20px 0px; }
+    .comidas section {
+      margin: 0px; }
+    .comidas h2 {
+      margin: 20px 0px 10px 0px; }
+    .comidas p {
+      margin: 0px; } }
 
 /*MAPA*/
 .mapa {
@@ -171,6 +228,12 @@ footer {
     height: 100%;
     width: 100%;
     position: absolute; }
+  @media (min-width: 320px) and (max-width: 820px) {
+    .mapa {
+      padding-bottom: 50%; } }
+  @media (min-width: 320px) and (max-width: 750px) {
+    .mapa {
+      padding-bottom: 80%; } }
 
 /*CONTACTO*/
 .bosque {
@@ -185,6 +248,18 @@ footer {
   margin-top: 40px;
   margin-bottom: 50px;
   box-shadow: 0px 30px 30px 10px black; }
+  @media (min-width: 320px) and (max-width: 820px) {
+    .formulario {
+      width: 90%;
+      height: auto; } }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .formulario {
+      width: 100%;
+      height: auto;
+      margin: 20px 0px 20px 0px;
+      background-color: none;
+      padding: 10px;
+      box-shadow: none; } }
 
 .formbox h2 {
   color: white;
@@ -195,18 +270,34 @@ footer {
 
 .formtext {
   display: flex; }
-
-.formbox input {
-  background-color: #16161a;
-  margin: 10px;
-  padding: 7px;
-  border-radius: 4px;
-  border: 2px solid #484ea7;
-  width: 400px;
-  color: aliceblue; }
+  .formtext input {
+    background-color: #16161a;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 2px solid #484ea7;
+    width: 400px;
+    color: aliceblue; }
+    @media (min-width: 320px) and (max-width: 550px) {
+      .formtext input {
+        width: 450px; } }
+    @media (min-width: 320px) and (max-width: 480px) {
+      .formtext input {
+        width: 300px; } }
+  @media (min-width: 320px) and (max-width: 820px) {
+    .formtext {
+      display: block; }
+      .formtext div {
+        text-align: center; } }
 
 .formtext2 input {
   width: 188px; }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .formtext2 input {
+      width: 450px; } }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .formtext2 input {
+      width: 300px; } }
 
 .escribenos textarea {
   border-radius: 4px;
@@ -216,17 +307,53 @@ footer {
   border: solid 4px #e5e5fa;
   background-color: #e5e5fa;
   font-size: 16px; }
+  @media (min-width: 320px) and (max-width: 820px) {
+    .escribenos textarea {
+      width: 350px;
+      margin: 20px; } }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .escribenos textarea {
+      width: 400px;
+      margin: 10px 0px 0px 0px; } }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .escribenos textarea {
+      width: 300px; } }
 
 .botons {
   width: 100%;
   margin-top: 20px;
-  display: inline-block; }
-  .botons input {
-    display: inline-block;
-    width: 350px;
-    background-color: #484ea7; }
-    .botons input:active {
-      transform: scale(1.03); }
+  display: inline-block;
+  text-align: center; }
+
+.boton, .enviar, .limpiar {
+  display: inline-block;
+  width: 350px;
+  margin: 10px;
+  padding: 7px;
+  border-radius: 4px;
+  color: aliceblue;
+  background-color: #484ea7;
+  border: 2px solid #484ea7; }
+  .boton:active, .enviar:active, .limpiar:active {
+    transform: scale(1.04); }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .boton, .enviar, .limpiar {
+      width: 400px; } }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .boton, .enviar, .limpiar {
+      width: 300px; } }
+
+.enviar {
+  background-color: #04244e;
+  border: 2px solid #04244e; }
+  .enviar:Active {
+    background-color: #083672; }
+
+.limpiar {
+  background-color: #460404;
+  border: 2px solid #460404; }
+  .limpiar:Active {
+    background-color: #740606; }
 
 /*QUIENES SOMOS*/
 .arbol img {
@@ -246,142 +373,16 @@ footer {
   .nosotros img {
     width: 450px;
     height: 500px; }
-
-/*@MEDIA*/
-@media (min-width: 320px) and (max-width: 900px) {
-  /*COMIDAS*/
-  .desayuno,
-  .almuerzo,
-  .jugos,
-  .postre {
-    width: 95%;
-    border-right: none; }
-  section {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    align-items: center;
-    border-bottom: solid 3px #410d0d; }
-  .comidas p {
-    padding: 20px 40px 20px 40px;
-    font-size: 18px; } }
-
-@media (min-width: 320px) and (max-width: 820px) {
-  /*MAPA*/
-  .mapa {
-    padding-bottom: 50%; }
-  /*CONTACTO*/
-  .formulario {
-    width: 90%;
-    height: auto; }
-  .formtext {
-    display: block; }
-    .formtext div {
-      text-align: center; }
-  .escribenos textarea {
-    margin: 20px; }
-  .botons {
-    width: 100%;
-    margin-top: 20px;
-    display: inline-block;
-    text-align: center; } }
-
-@media (min-width: 320px) and (max-width: 750px) {
-  /*MAIN*/
-  .imagenes {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 2px; }
-  /*MAPA*/
-  .mapa {
-    overflow: hidden;
-    padding-bottom: 60%; } }
-
-@media (min-width: 320px) and (max-width: 550px) {
-  /*MAIN*/
-  .imagenes {
-    display: flex;
-    flex-direction: column; }
-    .imagenes img {
-      width: 100%; }
-  /*FOOTER*/
-  .textfooter {
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
-  .redes img {
-    width: 50px;
-    height: 50px; }
-  /*COMIDAS*/
-  .comidas img {
-    margin: 20px 0px 20px 0px; }
-  .comidas section {
-    margin: 0px; }
-  .comidas h2 {
-    margin: 20px 0px 10px 0px; }
-  .comidas p {
-    margin: 0px; }
-  /*QUIENES SOMOS*/
-  .nosotros {
-    margin: 20px 0px 0px 0px; }
-    .nosotros h2 {
+    @media (min-width: 320px) and (max-width: 480px) {
+      .nosotros img {
+        width: 320px;
+        height: 350px; } }
+  @media (min-width: 320px) and (max-width: 550px) {
+    .nosotros {
       margin: 20px 0px 0px 0px; }
-    .nosotros p {
-      margin: 20px 0px 0px 0px;
-      padding: 0px 30px 0px 30px;
-      margin-bottom: 20px; } }
-
-@media (min-width: 320px) and (max-width: 535px) {
-  /*CONTACTO*/
-  .formulario {
-    width: 100%;
-    height: auto;
-    margin: 20px 0px 20px 0px;
-    background-color: none;
-    padding: 10px;
-    box-shadow: none; }
-  .formbox h2 {
-    margin: 10px 0px 0px 0px;
-    margin-bottom: 30px; }
-  .formbox input {
-    width: 400px;
-    margin: 10px 0px 0px 0px; }
-  .formtext2 input {
-    width: 400px; }
-  .escribenos textarea {
-    margin: 10px 0px 0px 0px; }
-  .botons input {
-    width: 400px; } }
-
-@media (min-width: 320px) and (max-width: 480px) {
-  /*COMIDAS*/
-  .comidas img {
-    width: 320px;
-    height: 200px; }
-  /*QUIENES SOMOS*/
-  .nosotros img {
-    width: 320px;
-    height: 350px; } }
-
-@media (min-width: 320px) and (max-width: 450px) {
-  /*CONTACTO*/
-  .formulario {
-    width: 100%;
-    height: auto;
-    margin: 20px 0px 20px 0px;
-    background-color: none;
-    padding: 10px;
-    box-shadow: none; }
-  .formbox h2 {
-    margin: 10px 0px 0px 0px;
-    margin-bottom: 30px; }
-  .formbox input {
-    width: 300px;
-    margin: 10px 0px 0px 0px; }
-  .formtext2 input {
-    width: 300px; }
-  .escribenos textarea {
-    margin: 10px 0px 0px 0px; }
-  .botons input {
-    width: 300px; } }
+      .nosotros h2 {
+        margin: 20px 0px 0px 0px; }
+      .nosotros p {
+        margin: 20px 0px 0px 0px;
+        padding: 0px 30px 0px 30px;
+        margin-bottom: 20px; } }

@@ -1,4 +1,9 @@
-@import "colores";
+@import "variables";
+@import "mixins";
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
 
 * {
     margin: 0;
@@ -13,9 +18,8 @@
 }
 
 body {
-    background-color: $color-fondo;
+    background-color: color(color-fondo);
 }
-
 
 li,
 a {
@@ -38,7 +42,7 @@ a {
 
 header {
     grid-area: header;
-    background-color: $color-fondo;
+    background-color: color(color-fondo);
 }
 
 main {
@@ -71,7 +75,7 @@ footer {
 /*BARRA DE NAVEGACION*/
 
 .navbar {
-    border-bottom: 3px solid $border-header;
+    border-bottom: 3px solid color(border-header);
 }
 
 /*MAIN*/
@@ -86,6 +90,21 @@ footer {
         width: 100%;
         height: 100%;
     }
+
+    @include movil {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 2px;
+    }
+
+    @include movil-mid {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
 /* FOOTER */
@@ -93,8 +112,8 @@ footer {
 footer {
     width: 100%;
     height: 100%;
-    background-color:$background-footer;
-    border-top: 2px solid $border-footer;
+    background-color: color(background-footer);
+    border-top: 2px solid color(border-footer);
 }
 
 
@@ -110,7 +129,7 @@ footer {
     h2 {
         margin-top: 20px;
         margin-bottom: 20px;
-        color:$h2-footer;
+        color: color(h2-footer);
         font-size: 20px;
     }
 
@@ -126,15 +145,20 @@ footer {
             margin-bottom: 10px;
 
             a {
-                color: $a-footer;
+                color: color(a-footer);
                 font-size: 18px;
                 font-style: oblique;
 
                 &:hover {
-                    color: $hover-footer;
+                    color: color(hover-footer);
                 }
             }
         }
+    }
+
+    @include movil-mid {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
@@ -144,7 +168,7 @@ footer {
     height: 200px;
     background-image: url(../image/cafe.jpg);
     background-size: cover;
-    border-top: 2px solid $border-footer;
+    border-top: 2px solid color(border-footer);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +177,7 @@ footer {
     span {
         display: block;
         text-align: center;
-        color:$span-footer;
+        color: color(span-footer);
         font-size: 16px;
     }
 }
@@ -173,6 +197,16 @@ footer {
         &:hover {
             transform: scale(1.1);
         }
+
+        @include movil-mid {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @include movil-mid {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -184,11 +218,16 @@ footer {
 .jugos,
 .postre {
     width: 90%;
-    background-color:$color-fondo;
+    background-color: color(color-fondo);
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-right: solid 4px $border-header;
+    border-right: solid 4px color(border-header);
+
+    @include tablet {
+        width: 95%;
+        border-right: none;
+    }
 }
 
 .comidas {
@@ -199,18 +238,37 @@ footer {
         margin: 20px;
         width: 460px;
         height: 300px;
+
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: $shadow-comida;
+        }
+
+        @include movil-mini {
+            width: 320px;
+            height: 200px;
+        }
     }
 
     section {
         margin: 20px;
         display: flex;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            align-items: center;
+            border-bottom: solid 3px color(border-header);
+
+        }
     }
 
     h2 {
         margin: 30px 0px 10px 0px;
         text-align: center;
         font-size: 20px;
-        color:$h2-comidas;
+        color: color(h2-comidas);
     }
 
     p {
@@ -218,8 +276,32 @@ footer {
         padding: 20px;
         text-align: center;
         font-size: 16px;
-        color:$p-comidas;
+        color: color(p-comidas);
+
+        @include tablet {
+            padding: 20px 40px 20px 40px;
+            font-size: 18px;
+        }
     }
+
+    @include movil-mid {
+        img {
+            margin: 20px 0px 20px 0px;
+        }
+
+        section {
+            margin: 0px;
+        }
+
+        h2 {
+            margin: 20px 0px 10px 0px;
+        }
+
+        p {
+            margin: 0px;
+        }
+    }
+
 }
 
 
@@ -238,6 +320,14 @@ footer {
         width: 100%;
         position: absolute;
     }
+
+    @include tablet-mid {
+        padding-bottom: 50%;
+    }
+
+    @include movil {
+        padding-bottom: 80%;
+    }
 }
 
 /*CONTACTO*/
@@ -249,38 +339,78 @@ footer {
 .formulario {
     width: 810px;
     height: 500px;
-    background-color:$background-form;
+    background-color: color(background-form);
     padding: 30px;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 50px;
-    box-shadow: 0px 30px 30px 10px black;
+    box-shadow: $shadow-form;
+
+    @include tablet-mid {
+        width: 90%;
+        height: auto;
+    }
+
+    @include movil-mid {
+        width: 100%;
+        height: auto;
+        margin: 20px 0px 20px 0px;
+        background-color: none;
+        padding: 10px;
+        box-shadow: none;
+    }
 }
 
-.formbox h2 {
-    color:$h2-form;
-    font-size: 25px;
-    text-align: center;
-    margin: 10px;
-    margin-bottom: 30px;
+.formbox {
+    h2 {
+        color: color(h2-form);
+        font-size: 25px;
+        text-align: center;
+        margin: 10px;
+        margin-bottom: 30px;
+    }
 }
 
 .formtext {
     display: flex;
-}
 
-.formbox input {
-    background-color:$background-form;
-    margin: 10px;
-    padding: 7px;
-    border-radius: 4px;
-    border: 2px solid $border-form;
-    width: 400px;
-    color: aliceblue;
+    input {
+        background-color: color(background-form);
+        margin: 10px;
+        padding: 7px;
+        border-radius: 4px;
+        border: 2px solid color(border-form);
+        width: 400px;
+        color: aliceblue;
+
+        @include movil-mid {
+            width: 450px;
+        }
+
+        @include movil-mini {
+            width: 300px;
+        }
+    }
+
+    @include tablet-mid {
+        display: block;
+
+        div {
+            text-align: center;
+        }
+    }
 }
 
 .formtext2 input {
     width: 188px;
+
+    @include movil-mid {
+        width: 450px;
+    }
+
+    @include movil-mini {
+        width: 300px;
+    }
 }
 
 .escribenos textarea {
@@ -288,26 +418,76 @@ footer {
     margin: 10px;
     width: auto;
     height: auto;
-    border: solid 4px $color-textarea;
-    background-color: $color-textarea;
+    border: solid 4px color(color-textarea);
+    background-color: color(color-textarea);
     font-size: 16px;
+
+    @include tablet-mid {
+        width: 350px;
+        margin: 20px;
+    }
+
+    @include movil-mid {
+        width: 400px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    @include movil-mini {
+        width: 300px;
+    }
 }
 
 .botons {
     width: 100%;
     margin-top: 20px;
     display: inline-block;
+    text-align: center;
+}
 
-    input {
-        display: inline-block;
-        width: 350px;
-        background-color:$border-form;
+.boton {
+    display: inline-block;
+    width: 350px;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    color: aliceblue;
+    background-color: color(border-form);
+    border: 2px solid color(border-form);
 
-        &:active {
-            transform: scale(1.03);
-        }
+    &:active {
+        transform: scale(1.04);
+    }
+
+    @include movil-mid {
+        width: 400px;
+    }
+
+    @include movil-mini {
+        width: 300px;
+    }
+
+}
+
+.enviar {
+    @extend .boton;
+    background-color: color(btn-enviar);
+    border: 2px solid color(btn-enviar);
+
+    &:Active {
+        background-color: color(btn-enviar-act);
     }
 }
+
+.limpiar {
+    @extend .boton;
+    background-color: color(btn-limpiar);
+    border: 2px solid color(btn-limpiar);
+
+    &:Active {
+        background-color: color(btn-limpiar-act);
+    }
+}
+
 
 /*QUIENES SOMOS*/
 
@@ -322,7 +502,7 @@ footer {
 
     h2 {
         margin: 20px;
-        color:$h2-nosotros;
+        color: color(h2-nosotros);
     }
 
     p {
@@ -334,145 +514,14 @@ footer {
     img {
         width: 450px;
         height: 500px;
-    }
-}
 
-/*@MEDIA*/
-
-@media (min-width:320px) and (max-width:900px) {
-
-    /*COMIDAS*/
-
-    .desayuno,
-    .almuerzo,
-    .jugos,
-    .postre {
-        width: 95%;
-        border-right: none;
-    }
-
-    section {
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-        align-items: center;
-        border-bottom: solid 3px $border-header;
-        ;
-    }
-
-    .comidas p {
-        padding: 20px 40px 20px 40px;
-        font-size: 18px;
-    }
-}
-
-@media (min-width:320px) and (max-width:820px) {
-
-    /*MAPA*/
-
-    .mapa {
-        padding-bottom: 50%;
-    }
-
-    /*CONTACTO*/
-
-    .formulario {
-        width: 90%;
-        height: auto;
-    }
-
-    .formtext {
-        display: block;
-
-        div {
-            text-align: center;
+        @include movil-mini {
+            width: 320px;
+            height: 350px;
         }
     }
 
-    .escribenos textarea {
-        margin: 20px;
-    }
-
-    .botons {
-        width: 100%;
-        margin-top: 20px;
-        display: inline-block;
-        text-align: center;
-    }
-}
-
-
-@media (min-width:320px) and (max-width:750px) {
-
-    /*MAIN*/
-
-    .imagenes {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 2px;
-    }
-
-    /*MAPA*/
-
-    .mapa {
-        overflow: hidden;
-        padding-bottom: 60%;
-    }
-
-}
-
-
-@media (min-width:320px) and (max-width:550px) {
-
-    /*MAIN*/
-
-    .imagenes {
-        display: flex;
-        flex-direction: column;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    /*FOOTER*/
-
-    .textfooter {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .redes img {
-        width: 50px;
-        height: 50px;
-    }
-
-    /*COMIDAS*/
-
-    .comidas {
-
-        img {
-            margin: 20px 0px 20px 0px;
-        }
-
-        section {
-            margin: 0px;
-        }
-
-        h2 {
-            margin: 20px 0px 10px 0px;
-        }
-
-        p {
-            margin: 0px;
-        }
-    }
-
-    /*QUIENES SOMOS*/
-
-    .nosotros {
+    @include movil-mid {
         margin: 20px 0px 0px 0px;
 
         h2 {
@@ -484,102 +533,5 @@ footer {
             padding: 0px 30px 0px 30px;
             margin-bottom: 20px;
         }
-    }
-
-}
-
-@media (min-width:320px) and (max-width:535px) {
-
-    /*CONTACTO*/
-
-    .formulario {
-        width: 100%;
-        height: auto;
-        margin: 20px 0px 20px 0px;
-        background-color: none;
-        padding: 10px;
-        box-shadow: none;
-
-    }
-
-    .formbox {
-        h2 {
-            margin: 10px 0px 0px 0px;
-            margin-bottom: 30px;
-        }
-
-        input {
-            width: 400px;
-            margin: 10px 0px 0px 0px;
-        }
-    }
-
-    .formtext2 input {
-        width: 400px;
-    }
-
-    .escribenos textarea {
-        margin: 10px 0px 0px 0px;
-    }
-
-    .botons input {
-        width: 400px;
-    }
-
-}
-
-@media (min-width:320px) and (max-width:480px) {
-
-    /*COMIDAS*/
-
-    .comidas img {
-        width: 320px;
-        height: 200px;
-    }
-
-    /*QUIENES SOMOS*/
-
-    .nosotros img {
-        width: 320px;
-        height: 350px;
-    }
-}
-
-@media (min-width:320px) and (max-width:450px) {
-
-    /*CONTACTO*/
-
-    .formulario {
-        width: 100%;
-        height: auto;
-        margin: 20px 0px 20px 0px;
-        background-color: none;
-        padding: 10px;
-        box-shadow: none;
-
-    }
-
-    .formbox {
-        h2 {
-            margin: 10px 0px 0px 0px;
-            margin-bottom: 30px;
-        }
-
-        input {
-            width: 300px;
-            margin: 10px 0px 0px 0px;
-        }
-    }
-
-    .formtext2 input {
-        width: 300px;
-    }
-
-    .escribenos textarea {
-        margin: 10px 0px 0px 0px;
-    }
-
-    .botons input {
-        width: 300px;
     }
 }
