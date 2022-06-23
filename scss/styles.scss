@@ -53,13 +53,7 @@ footer {
     grid-area: footer;
 }
 
-/*HEADER SUPERIOR*/
-
-.headerSuperior {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
+/*BARRA DE NAVEGACION*/
 
 .logo img {
     height: 90px;
@@ -71,8 +65,6 @@ footer {
         transform: scale(1.01);
     }
 }
-
-/*BARRA DE NAVEGACION*/
 
 .navbar {
     border-bottom: 3px solid color(border-header);
@@ -195,7 +187,7 @@ footer {
         margin: 10px;
 
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.07);
         }
 
         @include movil-mid {
@@ -204,14 +196,31 @@ footer {
         }
     }
 
-    @include movil-mid {
-        width: 50px;
-        height: 50px;
+    .facebook:hover {
+        filter: invert(40%) sepia(8%) saturate(3662%) hue-rotate(183deg) brightness(95%) contrast(88%);
+    }
+
+    .instagram:hover {
+        filter: invert(30%) sepia(46%) saturate(2220%) hue-rotate(294deg) brightness(99%) contrast(85%);
+    }
+
+    .twitter:hover {
+        filter: invert(68%) sepia(56%) saturate(6630%) hue-rotate(180deg) brightness(100%) contrast(89%);
+    }
+
+    .linkedin:hover {
+        filter: invert(29%) sepia(87%) saturate(831%) hue-rotate(183deg) brightness(92%) contrast(89%);
     }
 }
 
 
 /*COMIDAS*/
+
+.fondocomida {
+    background-image: $fondocomida ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .desayuno,
 .almuerzo,
@@ -222,11 +231,10 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-right: solid 4px color(border-header);
+    box-shadow: $shadow-comida;
 
-    @include tablet {
-        width: 95%;
-        border-right: none;
+    @include movil {
+        width: 100%;
     }
 }
 
@@ -238,9 +246,11 @@ footer {
         margin: 20px;
         width: 460px;
         height: 300px;
+        border-radius: 5px;
 
         &:hover {
             transform: scale(1.01);
+            border-radius: 5px;
             box-shadow: $shadow-comida;
         }
 
@@ -334,6 +344,8 @@ footer {
 
 .bosque {
     background-image: url(../image/Bosque.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .formulario {
@@ -421,6 +433,7 @@ footer {
     border: solid 4px color(color-textarea);
     background-color: color(color-textarea);
     font-size: 16px;
+    resize: none;
 
     @include tablet-mid {
         width: 350px;
@@ -491,29 +504,45 @@ footer {
 
 /*QUIENES SOMOS*/
 
-.arbol img {
+
+.banner img {
     width: 100%;
+    border-bottom: 3px solid color(border-header);
+}
+
+.fondonosotros {
+    background-image: $fondonosotros;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .nosotros {
-    width: auto;
-    margin: 20px;
+    width: 90%;
+    margin: 0px auto;
     text-align: center;
+    background-color: color(color-fondo);
+    box-shadow: $shadow-nosotros;
 
     h2 {
-        margin: 20px;
+        padding: 20px;
         color: color(h2-nosotros);
+        font-size: 30px;
     }
 
     p {
-        margin: 20px;
-        padding: 0px 30px 0px 30px;
-        margin-bottom: 20px;
+        padding: 20px 130px;
+        margin: 0;
+        font-size: 18px;
+
+        @include movil {
+            padding: 0px 20px;
+        }
     }
 
     img {
         width: 450px;
         height: 500px;
+        margin: 20px 0px;
 
         @include movil-mini {
             width: 320px;
@@ -521,17 +550,48 @@ footer {
         }
     }
 
-    @include movil-mid {
-        margin: 20px 0px 0px 0px;
+    h3 {
+        padding: 10px;
+        margin-top: 10px;
+        color: color(h3-nosotros);
+        font-size: 25px;
+        font-weight: bold;
+    }
 
-        h2 {
-            margin: 20px 0px 0px 0px;
+    .proveedores {
+        width: 80%;
+        margin: 0px auto;
+
+        ul {
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                padding: 20px 0px;
+                list-style: disc;
+                font-size: 18px;
+            }
+
+            img {
+                margin: 5px 0px 10px 0px;
+                width: 150px;
+                height: auto;
+
+                &:hover {
+                    transform: scale(1.08);
+                }
+            }
+
         }
 
-        p {
-            margin: 20px 0px 0px 0px;
-            padding: 0px 30px 0px 30px;
-            margin-bottom: 20px;
+        @include movil {
+            padding: 0px 20px;
         }
+    }
+
+    @include movil {
+        width: 100%;
     }
 }

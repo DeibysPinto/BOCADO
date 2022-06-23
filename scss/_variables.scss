@@ -1,7 +1,7 @@
 //mapa de colores
 
 $colors: (
-    border-header:rgb(65, 13, 13),
+    border-header:rgb(189, 189, 189),
     color-fondo:rgb(255, 246, 235),
     border-footer:rgb(202, 196, 196),
     h2-footer:rgb(255, 255, 255),
@@ -15,17 +15,25 @@ $colors: (
     h2-form: white,
     border-form: rgb(72, 78, 167),
     color-textarea: rgb(229, 229, 250),
-    h2-nosotros: rgb(128, 10, 10),
-    btn-enviar:rgb(4, 36, 78),
+    h2-nosotros: rgb(66, 15, 15),
+    h3-nosotros: rgb(8, 9, 71),
+    btn-enviar:rgb(51, 55, 114),
     btn-limpiar:rgb(70, 4, 4),
     btn-limpiar-act:rgb(116, 6, 6),
-    btn-enviar-act:rgb(8, 54, 114),
+    btn-enviar-act:rgb(72, 78, 167),
 );
+
+//backgrounds
+
+$fondonosotros: url(../image/fondoagua.png);
+$fondocomida: url(../image/fondoagua.png);
 
 //shadows
 
 $shadow-form: 0px 30px 30px 10px black;
-$shadow-comida: 0px 10px 15px 0px rgba(0, 0, 0, 0.8);
+$shadow-comida-img: 0px 10px 15px 0px rgba(0, 0, 0, 0.8);
+$shadow-comida: 0px 20px 20px 10px rgba(0, 0, 0, 0.637);
+$shadow-nosotros:  0px 20px 20px 10px rgba(0, 0, 0, 0.637);
 
 //@media
 
